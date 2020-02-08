@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  author: MyString
+  estado: MyString
+  fecha_prestamo: 
+  fecha_devoulto: 
+
+two:
+  title: MyString
+  author: MyString
+  estado: MyString
+  fecha_prestamo: 
+  fecha_devoulto: 

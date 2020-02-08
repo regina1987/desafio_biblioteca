@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+
+<h1 class="text-center m-4 text-dark"> LIbros</h1>
+<nav class="navbar navbar-light bg-light justify-content-between">
+<a class="navbar-brand"> <h3>Elige status de los  libros:  en estante o prestado</h3></a>
+<form class="form-inline">
+<input class="form-control mr-sm-2" type="search" placeholder="Search"
+aria-label="Estado" name="estado">
+<button class="btn btn-outline-success my-2 my-sm-0"
+type="submit">Search</button>
+</form>
+</nav>
+
+    <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Estado</th>
+      <th>Fecha prestamo</th>
+      <th>Fecha devoulto</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @libros.each do |libro| %>
+      <tr>
+        <td><%= libro.title %></td>
+        <td><%= libro.author %></td>
+        <td><%= libro.estado %></td>
+        <td><%= libro.fecha_prestamo %></td>
+        <td><%= libro.fecha_devoulto %></td>
+        <td><%= link_to 'Show', libro %></td>
+        <td><%= link_to 'Edit', edit_libro_path(libro) %></td>
+        <td><%= link_to 'Destroy', libro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<button type="button" class="btn text-white bg-dark "><%= link_to 'New Libro', new_libro_path %></button>

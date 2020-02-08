@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+<div class="card" style="width: 18rem;">
+
+  <div class="card-body">
+    <h5 class="card-title">Title</h5>
+    <p class="card-text"><%= @libro.title %></p>
+    <h5 class="card-title">Author</h5>
+    <p class="card-text"><%= @libro.author %></p>
+    <h5 class="card-title">Estado</h5>
+    <p class="card-text"><%= @libro.estado %></p>
+    <h5 class="card-title">Fecha prestamo</h5>
+    <p class="card-text"><%= @libro.fecha_devoulto %></p>
+    <h5 class="card-title">Fecha devoulto</h5>
+    <p class="card-text"><%= @libro.fecha_prestamo %></p>
+    <br>
+    <%= link_to 'Edit', edit_libro_path(@libro) %> |
+    <%= link_to 'Back', libros_path %>
+
+  </div>
+</div>
